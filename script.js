@@ -16,7 +16,7 @@ submit.addEventListener("click", () => {
     alert("welcome " + value[0]);
     email.value = "";
     password.value = "";
-    window.location.href = "./index.html";
+    window.location.href = "./home.html";
   } else {
     alert("your mail or password is wrong");
   }

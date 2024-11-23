@@ -1,315 +1,57 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script
-      src="https://kit.fontawesome.com/db4977b755.js"
-      crossorigin="anonymous"
-    ></script>
+    <title>TurboMeds</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Notable&display=swap");
-      .notable-regular {
-        font-family: "Notable", sans-serif;
-      }
-    </style>
   </head>
-  <body>
-    <header class="bg-[#CFF9E0]">
-      <nav class="container mx-auto">
-        <div class="navbar flex justify-between items-center gap-6">
-          <div class="flex">
-            <div><img src="assest/Group 5.png" alt="" /></div>
-            <a class="btn btn cart-ghost text-xl mx-2">TurboMeds</a>
-          </div>
-          <div class="form-control flex-1 relative">
-            <input
-              type="text"
-              placeholder="Search"
-              class="input input-bordered w-24 md:w-full z-10 bg-transparent"
-            />
-            <div class="absolute top-1/2 -translate-y-1/2 right-6">
-              <i class="fa-solid fa-magnifying-glass text-2xl -z-10"></i>
-            </div>
-          </div>
-          <div class="flex">
-            <div class="dropdown dropdown-end">
-              <div
-                tabindex="0"
-                role="button"
-                class="btn btn cart-ghost btn cart-circle avatar"
-              >
-                <a
-                  href="./login.html"
-                  class="w-10 rounded-full inline-block overflow-hidden"
-                >
-                  <img
-                    alt="Tailwind CSS Navbar component"
-                    src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
-                  />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-      <div class="container mx-auto">
-        <div class="flex justify-center items-center">
-          <ul
-            class="w-1/4 py-7 px-20 bg-[#74CFB3] text-[#002C22] text-3xl font-extrabold flex leading-8"
-          >
-            <li><a href="#">Categories</a></li>
-          </ul>
-          <ul
-            class="w-3/4 flex gap-10 justify-center items-center bg-[#002C22] py-7 px-9 text-white font-extrabold text-2xl"
-          >
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./progressing.html">Special Offer</a></li>
-            <li><a href="./progressing.html">Upload Prescription</a></li>
-            <li><a href="./progressing.html">Contact Us</a></li>
-            <li><a href="./progressing.html">About Us</a></li>
-          </ul>
-        </div>
+  <body class="bg-[#DFF6E9] h-screen flex items-center justify-center">
+    <!-- Main Container -->
+    <div
+      class="relative w-[90%] md:w-[80%] lg:w-[70%] flex flex-col md:flex-row bg-white shadow-lg rounded-xl overflow-hidden"
+    >
+      <!-- Left Section: Image -->
+      <div class="md:w-1/2 relative bg-[#008E6D]">
+        <img
+          src="./assest/Polygon.png"
+          alt="Pharmacist"
+          class="w-full h-full object-cover"
+        />
+        <!-- Optional overlay if needed -->
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-[#DFF6E9] to-transparent"
+        ></div>
       </div>
-    </header>
-    <main>
+
+      <!-- Right Section: Content -->
       <div
-        class="bg-[url(assest/banner.png)] bg-no-repeat bg-center py-[130px] flex justify-center items-center"
+        class="md:w-1/2 flex flex-col justify-center items-center px-6 md:px-12 py-12 bg-[#DFF6E9]"
       >
-        <h1 class="text-[#002C22] text-center">
-          <span class="text-[40px] notable-regular">Welcome </span> <br />
-          <span class="text-[40px] notable-regular">To</span><br />
-          <span class="text-[64px] notable-regular">TurboMeds</span>
-        </h1>
-      </div>
-      <!-- medicine card -->
-      <section class="bg-[#CFF9E0] pt-[52px] pb-6">
-        <div>
-          <h2
-            class="text-center mb-[47px] text-[#047359 text-[36px] font-extrabold"
+        <!-- Logo -->
+        <div class="mb-6">
+          <img src="./assest/Group 5.png" alt="TurboMeds Logo" class="h-10" />
+        </div>
+
+        <!-- Title -->
+        <h1 class="text-4xl font-extrabold text-[#008E6D] mb-4">TurboMeds</h1>
+
+        <!-- Buttons -->
+        <div class="w-full flex flex-col gap-4">
+          <a
+            href="/login.html"
+            class="block text-center bg-[#008E6D] text-white py-3 px-6 rounded-lg text-lg font-bold hover:bg-[#006B52] transition"
           >
-            Prescription Medicine <i class="fa-solid fa-capsules"></i>
-          </h2>
-          <div class="flex justify-center items-center gap-[108px]">
-            <!-- card -->
-            <div class="shadow-lg">
-              <div>
-                <img
-                  src="assest/medicine.png"
-                  class="w-full object-cover"
-                  alt="medicine"
-                />
-              </div>
-              <div class="bg-[#E3FAEC] px-6 pt-[35px] pb-6 font-extrabold">
-                <p class="text-[#047359] mb-6">PRODEP 20mg cap</p>
-                <p class="text-[#047359]">3 TAKA</p>
-              </div>
-              <button class="btn cart bg-[#047359] text-white w-full">
-                Add to Cart <i class="fa-solid fa-cart-shopping"></i>
-              </button>
-            </div>
-            <div class="shadow-lg">
-              <div>
-                <img
-                  src="assest/medicine.png"
-                  class="w-full object-cover"
-                  alt="medicine"
-                />
-              </div>
-              <div class="bg-[#E3FAEC] px-6 pt-[35px] pb-6 font-extrabold">
-                <p class="text-[#047359] mb-6">PRODEP 20mg cap</p>
-                <p class="text-[#047359]">3 TAKA</p>
-              </div>
-              <button class="btn cart bg-[#047359] text-white w-full">
-                Add to Cart <i class="fa-solid fa-cart-shopping"></i>
-              </button>
-            </div>
-            <div class="shadow-lg">
-              <div>
-                <img
-                  src="assest/medicine.png"
-                  class="w-full object-cover"
-                  alt="medicine"
-                />
-              </div>
-              <div class="bg-[#E3FAEC] px-6 pt-[35px] pb-6 font-extrabold">
-                <p class="text-[#047359] mb-6">PRODEP 20mg cap</p>
-                <p class="text-[#047359]">3 TAKA</p>
-              </div>
-              <button class="btn cart bg-[#047359] text-white w-full">
-                Add to Cart <i class="fa-solid fa-cart-shopping"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-        <div>
-          <h2
-            class="text-center mb-[47px] text-[#047359 text-[36px] font-extrabold mt-6"
+            LOG IN
+          </a>
+          <a
+            href="/signup.html"
+            class="block text-center bg-white border-2 border-[#008E6D] text-[#008E6D] py-3 px-6 rounded-lg text-lg font-bold hover:bg-[#E6F9F1] transition"
           >
-            Surgical Product
-          </h2>
-          <div class="flex justify-center items-center gap-[108px]">
-            <!-- card -->
-            <div class="shadow-lg">
-              <div>
-                <img
-                  src="assest/medical_product.png"
-                  class="w-full object-cover"
-                  alt="medical_product"
-                />
-              </div>
-              <div class="bg-[#E3FAEC] px-6 pt-[35px] pb-6 font-extrabold">
-                <p class="text-[#047359] mb-6">PRODEP 20mg cap</p>
-                <p class="text-[#047359]">3 TAKA</p>
-              </div>
-              <button class="btn cart bg-[#047359] text-white w-full">
-                Add to Cart <i class="fa-solid fa-cart-shopping"></i>
-              </button>
-            </div>
-            <div class="shadow-lg">
-              <div>
-                <img
-                  src="assest/medical_product.png"
-                  class="w-full object-cover"
-                  alt="medical_product"
-                />
-              </div>
-              <div class="bg-[#E3FAEC] px-6 pt-[35px] pb-6 font-extrabold">
-                <p class="text-[#047359] mb-6">PRODEP 20mg cap</p>
-                <p class="text-[#047359]">3 TAKA</p>
-              </div>
-              <button class="btn cart bg-[#047359] text-white w-full">
-                Add to Cart <i class="fa-solid fa-cart-shopping"></i>
-              </button>
-            </div>
-            <div class="shadow-lg">
-              <div>
-                <img
-                  src="assest/medical_product.png"
-                  class="w-full object-cover"
-                  alt="medical_product"
-                />
-              </div>
-              <div class="bg-[#E3FAEC] px-6 pt-[35px] pb-6 font-extrabold">
-                <p class="text-[#047359] mb-6">PRODEP 20mg cap</p>
-                <p class="text-[#047359]">3 TAKA</p>
-              </div>
-              <button class="btn cart bg-[#047359] text-white w-full">
-                Add to Cart <i class="fa-solid fa-cart-shopping"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-        <div>
-          <h2
-            class="text-center mb-[47px] text-[#047359 text-[36px] font-extrabold mt-6"
-          >
-            Dental & Oral Care
-          </h2>
-          <div class="flex justify-center items-center gap-[108px]">
-            <!-- card -->
-            <div class="shadow-lg">
-              <div>
-                <img
-                  src="assest/oral.png"
-                  class="w-full object-cover"
-                  alt="oral"
-                />
-              </div>
-              <div class="bg-[#E3FAEC] px-6 pt-[35px] pb-6 font-extrabold">
-                <p class="text-[#047359] mb-6">PRODEP 20mg cap</p>
-                <p class="text-[#047359]">3 TAKA</p>
-              </div>
-              <button class="btn cart bg-[#047359] text-white w-full">
-                Add to Cart <i class="fa-solid fa-cart-shopping"></i>
-              </button>
-            </div>
-            <div class="shadow-lg">
-              <div>
-                <img
-                  src="assest/oral.png"
-                  class="w-full object-cover"
-                  alt="oral"
-                />
-              </div>
-              <div class="bg-[#E3FAEC] px-6 pt-[35px] pb-6 font-extrabold">
-                <p class="text-[#047359] mb-6">PRODEP 20mg cap</p>
-                <p class="text-[#047359]">3 TAKA</p>
-              </div>
-              <button class="btn cart bg-[#047359] text-white w-full">
-                Add to Cart <i class="fa-solid fa-cart-shopping"></i>
-              </button>
-            </div>
-            <div class="shadow-lg">
-              <div>
-                <img
-                  src="assest/oral.png"
-                  class="w-full object-cover"
-                  alt="oral"
-                />
-              </div>
-              <div class="bg-[#E3FAEC] px-6 pt-[35px] pb-6 font-extrabold">
-                <p class="text-[#047359] mb-6">PRODEP 20mg cap</p>
-                <p class="text-[#047359]">3 TAKA</p>
-              </div>
-              <button class="btn cart bg-[#047359] text-white w-full">
-                Add to Cart <i class="fa-solid fa-cart-shopping"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer class="bg-[#002C22] pt-10 pb-20">
-      <div class="container mx-auto">
-        <div><img src="assest/Group 5.png" alt="" /></div>
-        <hr class="text-white font-bold mt-12" />
-      </div>
-      <div class="grid grid-cols-3 text-white container mx-auto mt-6">
-        <div>
-          <h3 class="font-semibold text-2xl">About</h3>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Catagories</a></li>
-          </ul>
-        </div>
-        <div>
-          <h2 class="font-extrabold text-6xl text-white">TurboMeds</h2>
-          <ul>
-            <li>
-              <a href="#"> Address: Lorem ipsum dolor sit amet consectetur. </a>
-            </li>
-            <li>
-              <a href="#"> Phone: Lorem ipsum dolor sit amet consectetur. </a>
-            </li>
-            <li>
-              <a href="#"> Email: Lorem ipsum dolor sit amet consectetur. </a>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="font-semibold text-2xl">Let’s Socialize</h3>
-          <ul>
-            <li>
-              <a href="#"
-                ><i class="fa-brands fa-facebook text-blue-500"></i
-              ></a>
-            </li>
-            <li><i class="fa-brands fa-twitter text-[#24A3F1]"></i></li>
-            <li><i class="fa-brands fa-youtube text-red-600"></i></li>
-          </ul>
+            Sign in
+          </a>
         </div>
       </div>
-    </footer>
-    <script src="index.js"></script>
+    </div>
   </body>
 </html>
